@@ -344,7 +344,7 @@ inline void VoiceCommand::ProcessMessage(const char* message) {
                     stringstream replace;
                     replace << "$";
                     replace << j;
-                    replace_all(match,replace.str(),"([^\t\n]+?)");
+                    replace_all(match,replace.str(),"([^\t\n]*)");
                 }
                 regex rexp2(match); cmatch n;
                 //this line is the bug somehow (I think)
